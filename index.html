@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!--Sets up stylesheet and script file linking. Adds favicon and site title as well-->
+    <meta charset="UTF-8">
+    <link rel="shortcut icon" type="image/png" href="Images/asl_logo.ico" />
+    <title>Heartbeat of Deception</title>
+    <link href="https://fonts.googleapis.com/css?family=Google+Sans:100,300,400,500" rel="stylesheet">
+    <link rel="stylesheet" href="CSS/style.css">
+    <link rel="stylesheet" href="CSS/animate.css">
+    <script src="dist/build.js"></script>
+</head>
+
+<body>
+    <!--Welcome Screen-->
+    <div id="welcomeContainer" class="animated">
+        <div id="welcomeScreen">
+            <h1>Welcome to Heartbeat of Deception</h1>
+            <h3 class="animated fadeInUp delay-2s">a Performance Enhance Quality rPPG Model (PEQrPPG)</h3>
+            <h4 class="animated fadeInUp delay-2s">Taif University</h4>
+        </div>
+        <button id="proceedButton">Let's GO!</button>
+    </div>
+
+    <!--Title bar explains the stage of the program 
+    (eg: instructions for Training, Prediction, and Video Chat)-->
+    <div id="titleBar">
+        <h1 id="stage">Detect the face is it Real or Fake?</h1>
+        <h3 id="steps"> our method can detect face attacks by using the rPPG to measure heart rate and respiratory rate.</h3>
+        <button id="nextButton" class="animated flash delay-3s">Back</button>
+    </div>
+
+    <!--The Translator Window displays the video of the user, various buttons, and holds
+    the training and translation screens-->
+    <div id="translatorWindow">
+        <!--Initial Training Holder creates the screen where users train Start and Stop Gestures-->
+        <!--Initial Training Holder creates the screen where users train Start and Stop Gestures-->
+        <div id="initialTrainingHolder">
+            <button id="startButton" class="trainButton realButton">Real</button>
+            <button id="stopButton" class="trainButton fakeButton">Fake</button>
+        </div>
+
+
+        <!--Video Holder displays the video feed from the user for training and translation.
+        It also displays the Video Call feed once the user decides to do that-->
+        <div id="videoHolder" class="videoContainerTrain">
+            <video id="video" class="videoTrain" src='' muted autoplay playsinline></video>
+            <iframe src="https://tokbox.com/embed/embed/ot-embed.js?embedId=f37957b6-0f91-4fc5-90ce-f818cc85b5bf&room=DEFAULT_ROOM&iframe=true"
+                width=650 height=370 allow="microphone; camera" id="videoCall"></iframe>
+        </div>
+    </div>
+
+    <!--Trained Card Holder contains all the trained gestures' cards.
+    It is outside the Training and Translation Windows because it has to be displayed on both screens-->
+    <div id="trainedCardsHolder">
+    </div>
+
+</body>
+</html>
